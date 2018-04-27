@@ -2,16 +2,38 @@
 layout: archive
 author_profile: true
 title: My Sample Projects
+styles: ["https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"]
 ---
 
 <h3 class="archive__subtitle">
     {{ site.data.ui-text[site.locale].github_repositories | default: "Github repositories" }}
   </h3>
 <div class="list__item">
-{% for repository in site.github.public_repositories %}
-  * <article class="archive__item" itemscope itemtype="http://schema.org/SoftwareSourceCode">
-      <h2 class="archive__item-title" itemprop="headline"><a href="{{ site.baseurl }}${url}">{{ repository.name }}</a></h2>
-      <div class="archive__item-excerpt" itemprop="description">{{ project_tagline }}</div>
-    </article>
+{% for project in site.data.projects %}
+  <article class="archive__item" itemscope itemtype="http://schema.org/SoftwareSourceCode">
+      <meta itemprop="author" content="{{ site.author.name }}" />
+      {% if project.targetProduct %}
+      <meta itemprop="targetProduct" content="{{ project.targetProduct }}" />
+      {% endif %}
+      {% if project.github-id %}
+        <h2 class="archive__item-title" itemprop="headline"><a href="{{ site.baseurl }}/{{ project.github-id }}">{{ project.name }}</a></h2>
+      {% endif %}
+      <div class="archive__item-excerpt" itemprop="description">{{ project.description }}</div>
+      <id class="detail-options">
+        {% if project.github-id %}
+        <a href="{{site.author.github}}/{{project.github-id}}" class="archive__item-show-details" itemprop="codeRepository">Source code</a>
+        {% endif %}
+        {% if project.programmingLanguages %}
+        <ul class="plangs" itemprop="targetProduct">
+          {% for plang in project.programmingLanguages %}
+          <li itemprop="sameAs" content="{{ plang }}">
+            <i title="{{plang}}" class="devicon-{{ plang | downcase | replace: ' ' }}-plain-wordmark colored"></i>
+          </li>
+          {% endfor %}
+        </ul>
+        <meta  content="{{ project.programmingLanguages | join: ', '}}" />
+        {% endif %}
+      </id>
+  </article>
 {% endfor %}
 </div>
