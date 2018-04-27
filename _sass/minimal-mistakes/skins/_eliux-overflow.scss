@@ -1,0 +1,80 @@
+/* ==========================================================================
+   Default skin
+   ========================================================================== */
+
+// Intentionally left blank
+/* StackOverflow colors */
+$so-orange: #F48024;
+$so-light-black: #393e46;
+$so-black: #242729;
+$so-gray-bg: #eff0f1;
+$so-close-to-white: #fafafb;
+/* Colors */
+$background-color: #eeeeee !default;
+$text-color: #222831 !default;
+$muted-text-color: #393e46 !default;
+$primary-color: #0092ca !default;
+$border-color: mix(#fff, $so-light-black, 75%) !default;
+$footer-background-color: #242729 !default;
+$link-color: #393e46 !default;
+$masthead-link-color: $text-color !default;
+$masthead-link-color-hover: $text-color !default;
+$navicon-link-color-hover: mix(#fff, $text-color , 80%) !default;
+
+.page__footer {
+  color: #6a737c !important; // override
+}
+
+.page__footer-follow .social-icons .svg-inline--fa {
+  color: inherit;
+}
+
+
+/* Sidebar */
+.sidebar{
+  .social-icons{
+    .social-skype{
+      label{
+        margin: 1em auto -1.2em;
+      }
+      a > img {
+        width: auto;
+      }
+    }
+  }
+}
+
+.masthead{
+  background-color: $so-close-to-white;
+  border-top: 3px solid $so-orange;
+  box-shadow: 0 1px 0 rgba(12,13,14,0.1),
+   0 1px 3px rgba(12,13,14,0.1), 
+   0 4px 20px rgba(12,13,14,0.035), 
+   0 1px 1px rgba(12,13,14,0.025);
+  .icon {
+    width: auto;
+  }
+  .greedy-nav{
+    background-color: inherit; 
+    display: relative;
+    .visible-links{
+      line-height: 3em;
+      a{
+        padding: 0 1em;
+        display: inline-flex;
+        align-items: center;
+      }
+      a:hover, a:focus{
+        background-color: $so-gray-bg;
+        text-decoration: none;
+        outline: none;
+      }
+      a:hover:before, a:before{
+        background: $so-orange;
+      }
+    } 
+  }
+  .masthead__inner-wrap{
+    padding: 0 1em;
+  }
+}
