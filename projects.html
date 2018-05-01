@@ -16,7 +16,7 @@ styles: ["https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f152
       <meta itemprop="targetProduct" content="{{ project.targetProduct }}" />
       {% endif %}
       {% if project.github-id %}
-        <h2 class="archive__item-title" itemprop="headline"><a href="{{ site.baseurl }}/{{ project.github-id }}">{{ project.name }}</a></h2>
+        <h2 class="archive__item-title" itemprop="headline"><a href="http://{{ site.www }}/{{ project.github-id }}">{{ project.name }}</a></h2>
       {% endif %}
       <div class="archive__item-excerpt" itemprop="description">{{ project.description }}</div>
       <id class="detail-options">

@@ -13,6 +13,7 @@
 theme                    : "minimal-mistakes-jekyll"
 remote_theme             : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "eliux-overflow" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+www                      : "eliux.github.io"
 
 # Site Settings
 locale                   : "en-US"
@@ -64,7 +65,7 @@ atom_feed:
   path                   : # blank (default) uses feed.xml
 search                   : true # true, false (default)
 search_full_content      : true # true, false (default)
-search_provider          : algolia # lunr (default), algolia
+search_provider          : lunr # lunr (default), algolia
 algolia:
   application_id         : 10PFEDRH13 # YOUR_APPLICATION_ID
   index_name             : eliux.github.io # YOUR_INDEX_NAME
@@ -101,7 +102,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Eliecer Hdz"
+  name             : "Eliecer Hernández"
   avatar           : "/assets/images/eliux.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Out of the box thinker with software development skills"
   location         : "Quito, Ecuador"
