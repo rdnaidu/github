@@ -1,4 +1,11 @@
-
+- name: Mega for Java (MEGAcmd4J)
+  programmingLanguages : ['Java', 'Mega']
+  description: >-  
+    I started this, my first open source project, right after creating this website.
+    It allows to access to the Mega.nz API using the MEGAcmd CLI. So yes, its
+    basically a wrapper. Its very useful for those who wants to use this nice 
+    cloud storage service with 100 Gb of free space.
+  github-id: MEGAcmd4J
 - name: Catch the Pig
   programmingLanguages : ['Java', 'Android']
   description: >-  
