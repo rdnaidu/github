@@ -1,4 +1,4 @@
-#Welcome to my website project
+# Welcome to my website project
 This is the project that will serve as container of all my articles to document my projects and ideas..
 
 ## How to setup and run
