@@ -16,3 +16,31 @@
   github-id: CatchThePig
   targetProduct: catchthepig.apk
   #runtimePlatform: Java v1, Python2.3, .Net Framework 3.0
+- name: CIS 194 Homeworks
+  programmingLanguages: ['Haskell']
+  description: >-
+    While doing the CIS 194 course for Haskell introduction, while I 
+    started working on StackBuilders S.A, I had to deliver regularely 
+    this homeworks to my supervisor to prove my grasp on Haskell and 
+    on functional programming principles. New concepts every week and 
+    at the end of each week an exam. Give a look to the *stagging* 
+    branch, it has even more homeworks.
+  github-id: cis194
+  no-gh-pages: true
+- name: Human Resources Gestor
+  programmingLanguages: ['PHP', 'Symfony']
+  description: >-
+    Before start working on Experteam S.A I was tested with this exercise 
+    to prove I was capable to work with Symfony 2. I had worked with 
+    Symfony 1 in a small project like 5 years ago, nonetheless I have
+    good experience on working on multiple PHP frameworks so I could take
+    this task and deliver it 24 hours later. 
+  github-id: hrgestor
+- name: Wallet Parser
+  programmingLanguages: ['Java']
+  description: >-
+    Project created for the WalletHub team to get a better idea of my 
+    technical and problem-solving skills.
+  github-id: wallethub-parser
+
+

@@ -11,8 +11,10 @@ $so-gray-bg: #eff0f1;
 $so-close-to-white: #fafafb;
 $so-dark-green: #45A163;
 $so-blue: #07C;
+$in-blue: #3c98c4;
 /* Colors */
 $background-color: #eeeeee !default;
+$background-color-darker: #9c9b80;
 $text-color: #222831 !default;
 $muted-text-color: #393e46 !default;
 $primary-color: #0092ca !default;
@@ -112,9 +114,22 @@ $navicon-link-color-hover: mix(#fff, $text-color , 80%) !default;
           padding: 1px;
           list-style: none; 
           .devicon-java-plain-wordmark,         
-          .devicon-android-plain-wordmark{
+          .devicon-android-plain-wordmark,       
+          .devicon-php-plain-wordmark{
             color: $so-light-black;
           } 
+          .devicon-java-plain{
+            color: $background-color-darker
+          }
+          .devicon-android-plain{
+            color: $in-blue
+          }
+          .devicon-php-plain{
+            color: $in-blue
+          }
+          .devicon-symfony-plain{
+            color: $link-color
+          }
         }
       }
     }

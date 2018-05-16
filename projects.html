@@ -4,10 +4,12 @@ author_profile: true
 title: My Sample Projects
 styles: ["https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"]
 ---
-
-<h3 class="archive__subtitle">
-    {{ site.data.ui-text[site.locale].github_repositories | default: "Github repositories" }}
-  </h3>
+<h2 class="archive__subtitle">
+  {{ site.data.ui-text[site.locale].github_repositories | default: "Github repositories" }}
+</h2>
+<p>
+    This is some code of my creation I can share with you and hosted in my <a href="{{site.author.github}}">github</a>.
+</p>
 <div class="list__item">
 {% for project in site.data.projects %}
   <article class="archive__item" itemscope itemtype="http://schema.org/SoftwareSourceCode">
@@ -16,7 +18,13 @@ styles: ["https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f152
       <meta itemprop="targetProduct" content="{{ project.targetProduct }}" />
       {% endif %}
       {% if project.github-id %}
-        <h2 class="archive__item-title" itemprop="headline"><a href="http://{{ site.www }}/{{ project.github-id }}">{{ project.name }}</a></h2>
+        <h2 class="archive__item-title" itemprop="headline">
+          {% if project.no-gh-pages %}
+          <a href="{{site.author.github}}/{{project.github-id}}">{{ project.name }}</a>
+        {% else %}
+          <a href="http://{{ site.www }}/{{ project.github-id }}">{{ project.name }}</a>
+          {% endif %}
+      </h2>
       {% endif %}
       <div class="archive__item-excerpt" itemprop="description">{{ project.description }}</div>
       <id class="detail-options">
@@ -27,7 +35,7 @@ styles: ["https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f152
         <ul class="plangs" itemprop="targetProduct">
           {% for plang in project.programmingLanguages %}
           <li itemprop="sameAs" content="{{ plang }}">
-            <i title="{{plang}}" class="devicon-{{ plang | downcase | replace: ' ' }}-plain-wordmark colored"></i>
+            <i title="{{plang}}" class="devicon-{{ plang | downcase | replace: ' ' }}-plain colored"></i>
           </li>
           {% endfor %}
         </ul>
