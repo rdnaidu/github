@@ -6,6 +6,45 @@
     basically a wrapper. Its very useful for those who wants to use this nice 
     cloud storage service with 100 Gb of free space.
   github-id: MEGAcmd4J
+- name: Code snippets for the Twilio API documentation
+  programmingLanguages : ['Ruby', 'Javascript']
+  description: >-
+    How do you think Twilio reviews hundreds of codes in their official
+    documentation? This is the suite of tools that make it possible. 
+    I am honored and pleased of have worked in the codebase of this great project 
+    since its early days.
+  url: https://github.com/TwilioDevEd/api-snippets/commits?author=EliuX
+- name: Employee Directory with Servlets (Twilio)
+  programmingLanguages: ['Java', 'JavaEE', 'Twilio', 'GoogleGuice']
+  description: >-
+    Use Twilio to accept SMS messages and translate them into queries against a 
+    SQLite database. These example functions show how to access an Employee 
+    Directory via SMS. A mobile phone user can send a text message with a partial 
+    string of the person's name and it will return their picture and contact 
+    information (Email address and Phone number).
+  url: https://github.com/TwilioDevEd/employee-directory-servlets
+- name: Notifier and SMS Notifications with Twilio Notify
+  programmingLanguages: ['PHP', 'Laravel', 'Twilio']
+  description: >-  
+    Tag users and send group notifications with one request. 
+    Twilio alerts everyone that matches the specified tags.
+  url: https://github.com/TwilioDevEd/notifier-laravel
+- name: TaskRouter on Servlets
+  programmingLanguages: ['Java', 'JavaEE', 'Twilio', 'GoogleGuice']
+  description: >- 
+    Use Twilio to provide your user with multiple options through phone calls, 
+    so they can be assisted by an agent specialized in the chosen topic. 
+    This is basically a call center created with the TaskRouter API of Twilio. 
+    This example uses a SQLite database to log phone calls which were not assisted.
+  url: https://github.com/TwilioDevEd/task-router-servlets  
+- name: TaskRouter on Laravel
+  programmingLanguages: ['PHP', 'Laravel', 'Twilio']
+  description: >- 
+    Use Twilio to provide your user with multiple options through phone calls, 
+    so they can be assisted by an agent specialized in the chosen topic. 
+    This is basically a call center created with the Task Router API of Twilio. 
+    This example uses a SQLite database to log phone calls which were not assisted.
+  url: https://github.com/TwilioDevEd/task-router-laravel/
 - name: Catch the Pig
   programmingLanguages : ['Java', 'Android']
   description: >-  
@@ -23,10 +62,9 @@
     started working on StackBuilders S.A, I had to deliver regularely 
     this homeworks to my supervisor to prove my grasp on Haskell and 
     on functional programming principles. New concepts every week and 
-    at the end of each week an exam. Give a look to the *stagging* 
+    at the end of each week an exam. Give a look to the stagging
     branch, it has even more homeworks.
-  github-id: cis194
-  no-gh-pages: true
+  url: https://github.com/EliuX/cis194 
 - name: Human Resources Gestor
   programmingLanguages: ['PHP', 'Symfony']
   description: >-

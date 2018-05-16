@@ -8,27 +8,27 @@ styles: ["https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f152
   {{ site.data.ui-text[site.locale].github_repositories | default: "Github repositories" }}
 </h2>
 <p>
-    This is some code of my creation I can share with you and hosted in my <a href="{{site.author.github}}">github</a>.
+    These are projects where I have participated partially or totally in the creation of its codebase.
 </p>
-<div class="list__item">
+<section class="list__item">
 {% for project in site.data.projects %}
   <article class="archive__item" itemscope itemtype="http://schema.org/SoftwareSourceCode">
       <meta itemprop="author" content="{{ site.author.name }}" />
       {% if project.targetProduct %}
       <meta itemprop="targetProduct" content="{{ project.targetProduct }}" />
-      {% endif %}
-      {% if project.github-id %}
+      {% endif %} 
         <h2 class="archive__item-title" itemprop="headline">
-          {% if project.no-gh-pages %}
-          <a href="{{site.author.github}}/{{project.github-id}}">{{ project.name }}</a>
-        {% else %}
-          <a href="http://{{ site.www }}/{{ project.github-id }}">{{ project.name }}</a>
+          {% if project.url %}
+          <a href="{{project.url}}">{{ project.name }}</a>
+          {% else %}
+          <a href="{{site.author.github}}/{{project.github-id}}">{{ project.name }}</a> 
           {% endif %}
-      </h2>
-      {% endif %}
+        </h2>
       <div class="archive__item-excerpt" itemprop="description">{{ project.description }}</div>
       <id class="detail-options">
-        {% if project.github-id %}
+        {% if project.url %}
+        <a href="{{project.url}}" class="archive__item-show-details" itemprop="codeRepository">Source code</a>
+        {% else %}
         <a href="{{site.author.github}}/{{project.github-id}}" class="archive__item-show-details" itemprop="codeRepository">Source code</a>
         {% endif %}
         {% if project.programmingLanguages %}
@@ -44,4 +44,8 @@ styles: ["https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f152
       </id>
   </article>
 {% endfor %}
-</div>
+<p class="notice--info"><strong>And more...</strong> 
+  Unfortunately there are some projects which I cannot share because it belongs to 
+  previous costumers or because they are just private like this <a href="http://uni-to.appspot.com">Unito</a>
+</p> 
+</section>

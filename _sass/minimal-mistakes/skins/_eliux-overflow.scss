@@ -118,6 +118,7 @@ $navicon-link-color-hover: mix(#fff, $text-color , 80%) !default;
           .devicon-php-plain-wordmark{
             color: $so-light-black;
           } 
+          .devicon-ruby-plain,
           .devicon-java-plain{
             color: $background-color-darker
           }
@@ -129,6 +130,15 @@ $navicon-link-color-hover: mix(#fff, $text-color , 80%) !default;
           }
           .devicon-symfony-plain{
             color: $link-color
+          }          
+          .devicon-laravel-plain,
+          .devicon-javascript-plain{
+            color: $so-orange
+          } 
+          .devicon-haskell-plain{
+            background: url("/assets/images/lang/haskell.svg") no-repeat top left;
+            background-size: contain;
+            color: $background-color-darker
           }
         }
       }
