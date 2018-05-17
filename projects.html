@@ -20,7 +20,7 @@ title: My Sample Projects
           {% if project.url %}
           <a href="{{project.url}}">{{ project.name }}</a>
           {% else %}
-          <a href="{{site.author.github}}/{{project.github-id}}">{{ project.name }}</a> 
+          <a href="https://{{ site.www }}/{{project.github-id }}">{{ project.name }}</a> 
           {% endif %}
         </h2>
       <div class="archive__item-excerpt" itemprop="description">{{ project.description }}</div>
