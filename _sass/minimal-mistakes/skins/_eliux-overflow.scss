@@ -5,6 +5,7 @@
 // Intentionally left blank
 /* StackOverflow colors */
 $so-orange: #F48024;
+$so-red: $so-orange;
 $so-light-black: #393e46;
 $so-black: #242729;
 $so-gray-bg: #eff0f1;
@@ -112,35 +113,33 @@ $navicon-link-color-hover: mix(#fff, $text-color , 80%) !default;
         li{
           margin: 0px 2px;
           padding: 1px;
-          list-style: none; 
-          .devicon-java-plain-wordmark,         
-          .devicon-android-plain-wordmark,       
-          .devicon-php-plain-wordmark{
+          list-style: none;       
+          .icon-lang-android:before,       
+          .icon-lang-php:before{
             color: $so-light-black;
           } 
-          .devicon-ruby-plain,
-          .devicon-java-plain{
+          .icon-lang-java:before,  
+          .icon-lang-ruby:before,{
             color: $background-color-darker
           }
-          .devicon-android-plain{
+          .icon-lang-android:before{
             color: $in-blue
           }
-          .devicon-php-plain{
+          .icon-lang-php:before{
             color: $in-blue
           }
-          .devicon-symfony-plain{
+          .icon-lang-symfony:before{
             color: $link-color
           }          
-          .devicon-laravel-plain,
-          .devicon-javascript-plain{
+          .icon-lang-haskell:before,
+          .icon-lang-javascript:before {
             color: $so-orange
-          } 
-          .devicon-haskell-plain{
-            background: url("/assets/images/lang/haskell.svg") no-repeat top left;
-            background-size: contain;
-            color: $background-color-darker
           }
-        }
+          .icon-lang-laravel:before,  
+          .icon-lang-mega:before{
+            color: $so-red;
+          }
+        }   
       }
     }
   }
