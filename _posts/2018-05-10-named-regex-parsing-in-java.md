@@ -9,6 +9,7 @@ tags:
   - Parsing
 categories: java regular-expressions
 excerpt: "Using Java regular expressions how to get a more meanful result using names for capturing the groups?"
+comments: true
 ---
 
 ## Simples case
@@ -217,7 +218,7 @@ public static ExportInfo parseExportListInfo(String exportInfoLine) {
 Tests can be run again to check everything is working as before; but this time we know which are the parameters we are passing to the constructor and the purpose of the groups that are been captured; all thanks to the flexibility of named groups in regular expressions in Java. 
 
 ## Conclusions
-Regular expressions are a powerful tool that can be used in almost any modern language. Patterns for capturing groups can be tricky to be understand, but with the help of named groups we can make it more meanful for yourself in the future and for other developers.
+Regular expressions are a powerful tool that can be used in almost any modern language. Patterns for capturing groups can be tricky to be understood, but with the help of named groups we can make it more meanful for yourself in the future and for other developers.
 
 ## See more
 
