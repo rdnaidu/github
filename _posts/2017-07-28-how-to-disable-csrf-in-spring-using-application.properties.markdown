@@ -11,6 +11,7 @@ tags:
   - properties
 categories: java spring security 
 excerpt: "How to disable CRSF protection in Spring by setting `security.enable_csrf: false` in the application.properties"
+comments: true
 ---
 
 ## Problem 

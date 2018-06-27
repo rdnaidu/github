@@ -12,6 +12,7 @@ tags:
   - network config
 categories: google-cloud-platform google-compute-engine
 excerpt: "Setup an static ip in a Google Compute Engine instance"
+comments: true
 ---
 By default Google Compute Engine instances are created with ephimeral IP address. What if you want to set to them an static IP that doesnt change? 
 For instance, the most common scenario would be to link to that IP a catchy <abr title="Domain Name System">DNS</abr> for your web application or API.

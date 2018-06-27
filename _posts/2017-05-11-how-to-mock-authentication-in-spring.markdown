@@ -11,6 +11,7 @@ tags:
   - mock
 categories: java spring testing 
 excerpt: "Mock a simple but flexible security hierarchy to be check in calls to Rest Controllers"
+comments: true
 ---
 Have you ever looked for a simple and flexible way to mock a security hierarchy and try it out in your rest controllers in Spring? After reading the [Spring Security Reference][1] I realized there are straightforward ways using [AOP](https://docs.spring.io/spring/docs/4.3.x/spring-framework-reference/html/aop.html), which solutions often are the greatest ones for testing. For mocking credentials in Spring you can use the annotations `@WithMockUser`, `@WithUserDetails` and `@WithSecurityContext`, included in the artifact:
 
