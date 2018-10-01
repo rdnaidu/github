@@ -1,19 +1,19 @@
 ---
 layout: single
 classes: wide
-title:  "Meanful parsing in Java with regular expressions"
+title:  "Meaningful parsing in Java with regular expressions"
 date:   2018-05-10 17:40 -0500
 tags:
   - Java
   - Regular Expressions
   - Parsing
 categories: java regular-expressions
-excerpt: "Using Java regular expressions how to get a more meanful result using names for capturing the groups?"
+excerpt: "Using Java regular expressions how to get a result with better semantic using names for capturing the groups?"
 comments: true
 ---
 
 ## Simples case
-Many times developers find theirselves in the situation where they need to analyze a string and convert it into a more meanful structure for their project; that's basically what [parsing][parsing-meaning] is all about. In Java that smart structure is probably an object which is instanced with the values we have gathered before.
+Many times developers find theirselves in the situation where they need to analyze a string and convert it into a more meaningful structure for their project; that's basically what [parsing][parsing-meaning] is all about. In Java that smart structure is probably an object which is instanced with the values we have gathered before.
 
 Most of the time the content we need to parse has a separator; specially if its a program output. For instance if we have a <abr title="Comma-separated values">CSV</abr> entry we can use a simple split and infer each property based on its position, format it to the correct type and then construct the final object; e.g.
 
@@ -218,7 +218,7 @@ public static ExportInfo parseExportListInfo(String exportInfoLine) {
 Tests can be run again to check everything is working as before; but this time we know which are the parameters we are passing to the constructor and the purpose of the groups that are been captured; all thanks to the flexibility of named groups in regular expressions in Java. 
 
 ## Conclusions
-Regular expressions are a powerful tool that can be used in almost any modern language. Patterns for capturing groups can be tricky to be understood, but with the help of named groups we can make it more meanful for yourself in the future and for other developers.
+Regular expressions are a powerful tool that can be used in almost any modern language. Patterns for capturing groups can be tricky to be understood, but with the help of named groups we can make it more meaningful for yourself in the future and for other developers.
 
 ## See more
 
