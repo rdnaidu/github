@@ -1,7 +1,14 @@
+- name: Flask - OPA (Open Policy Agent)
+  programmingLanguages : ['Python', 'OPA']
+  description: >-
+    My first OSS project in Python. Its a Flask extension to enforce policies 
+    using OPA. It allows authorization on HTTP API requests and 
+    Policy Enforcement Points.
+  github-id: Flask-OPA
 - name: Mega for Java (MEGAcmd4J)
   programmingLanguages : ['Java', 'Mega']
   description: >-  
-    I started this, my first open source project, right after creating this website.
+    My first open source project, made in Java, right after creating this website.
     It allows to access to the Mega.nz API using the MEGAcmd CLI. So yes, its
     basically a wrapper. Its very useful for those who wants to use this nice 
     cloud storage service with 100 Gb of free space.

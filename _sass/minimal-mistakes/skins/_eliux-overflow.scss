@@ -113,12 +113,13 @@ $navicon-link-color-hover: mix(#fff, $text-color , 80%) !default;
         li{
           margin: 0px 2px;
           padding: 1px;
-          list-style: none;       
-          .icon-lang-android:before,       
+          list-style: none;           
+          .icon-lang-android:before,     
           .icon-lang-php:before{
             color: $so-light-black;
           } 
           .icon-lang-java:before,  
+          .icon-lang-opa:before,  
           .icon-lang-ruby:before,{
             color: $background-color-darker
           }
