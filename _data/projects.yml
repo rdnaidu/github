@@ -4,7 +4,7 @@
     My first OSS project in Python. Its a Flask extension to enforce policies 
     using OPA. It allows authorization on HTTP API requests and 
     Policy Enforcement Points.
-  github-id: Flask-OPA
+  github-id: flask-opa
 - name: Mega for Java (MEGAcmd4J)
   programmingLanguages : ['Java', 'Mega']
   description: >-  

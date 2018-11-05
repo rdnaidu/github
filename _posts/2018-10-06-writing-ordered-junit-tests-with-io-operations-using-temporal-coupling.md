@@ -66,11 +66,7 @@ is the cause of subsequent failing tests.
  the actions are well established. e.g. open and close a session. Sadly in our case the tests depends on previously 
  generated states, where most of the previous functions are involved in.
 
-<<<<<<< HEAD
 ## How to do temporal coupling in JUnit tests in a way that makes sense
-=======
-## How to do temporal coupling in JUnit tests
->>>>>>> fef4424f300c06e8551d2b146651173f369475a9
 Being that said, lets see how we can do temporal coupled tests using JUnit/Java the best way possible.
 
 ```java
