@@ -16,7 +16,7 @@ excerpt: "How to assure your tests are going to be executed in a particular orde
 comments: true
 ---
 
-## When temporal coupling are a necessary evil
+## When temporal coupling is a necessary evil
 While writing a library or a core part of a system that relies mostly in IO operations you might need that the 
 state of the previous IO operations works as setup for the tests that follows. Nonetheless, its good to mention that 
 every test should be independent from each other and at the beginning of it you can setup certain state if needed. Also 
@@ -37,11 +37,11 @@ functionality in real use case scenarios; e.g.
  Nonetheless that minimum common functionality is not very clear in some contexts, mostly because there might not be a 
  single test just for that failing functionality.
  
- 2. Temporal coupled tests: Create a tests in order, so you first create a file, then create a folder with the same name 
+ 2. Temporal coupled tests: Create tests in order; so you first create a file, then create a folder with the same name 
  and for the third you want to test that the function `deleteFile` only deletes the file and not the folder (which on 
- purpose has that same name). If you make these tests run in order, despite the fact a tests continue running although 
- previous ones have failed, you can pretty much understand in your unit test logs which functionality might be the one 
- that causes the failing. E.g.
+ purpose has that same name). If you make these tests to run sequentially, despite the fact that tests might continue 
+ running although previous ones have failed, you can pretty much understand in your unit test logs which functionality 
+ might be the one that causes the failure. E.g.
  
  ```txt
  test_create_file_A                                     [FAILED]
