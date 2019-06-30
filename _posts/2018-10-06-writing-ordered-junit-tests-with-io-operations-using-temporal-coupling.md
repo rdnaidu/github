@@ -9,6 +9,7 @@ tags:
   - Tests
   - Temporal Coupling
   - IO Tests
+  - IO
  
 categories: java tests
 excerpt: "How to assure your tests are going to be executed in a particular order so you take
