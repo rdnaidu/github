@@ -1,11 +1,11 @@
 ---
 layout: single
 classes: wide
-title:  "Writing ordered JUnit tests for IO operations using temporal coupling"
+title:  "Writing ordered JUnit4 tests for IO operations using temporal coupling"
 date:   2018-05-10 17:40 -0500
 tags:
   - Java
-  - JUnit
+  - JUnit4
   - Tests
   - Temporal Coupling
   - IO Tests
@@ -30,7 +30,7 @@ functionality in real use case scenarios; e.g.
  two choices:
  
  1. Independent tests: Create a test for creating a folder and other for creating a file. Then our aforementioned 
- test that does what the other 2 before do and something else. Most of test libraries like JUnit fail tests independently, 
+ test that does what the other 2 before do and something else. Most of test libraries like JUnit4 fail tests independently, 
  so when the test for creating the file fails then all others that do that same functionality fail as well. In such case, 
  you have to figure out that the failing feature is the one related to the simplest test of all failing ones: because it 
  has the minimum common functionality among them, so that functionality must be what is failing, i.e. creating a file. 
@@ -66,8 +66,8 @@ is the cause of subsequent failing tests.
  the actions are well established. e.g. open and close a session. Sadly in our case the tests depends on previously 
  generated states, where most of the previous functions are involved in.
 
-## How to do temporal coupling in JUnit tests in a way that makes sense
-Being that said, lets see how we can do temporal coupled tests using JUnit/Java the best way possible.
+## How to do temporal coupling in JUnit4 tests in a way that makes sense
+Being that said, lets see how we can do temporal coupled tests using JUnit4/Java the best way possible.
 
 ```java
 import org.junit.*;
@@ -106,7 +106,7 @@ public class BasicActionsTest {
 Lets break this down:
 
 1. `@FixMethodOrder(MethodSorters.NAME_ASCENDING)`: It guarantees that tests are going to be executed in alphabetical 
-order. Thanks to this we don't have to add any additional test dependency to do what we need; junit will be enough.
+order. Thanks to this we don't have to add any additional test dependency to do what we need; JUnit4 will be enough.
 To do so we attach a prefix that assures the wanted alphabetical order, i.e. `stage_xx_`, so whatever be the test that 
 follows it will be executed following that order. 
 2. `@BeforeClass` and `@AfterClass` allows you to run code at the beginning and at the end of the unit tests. E.g.
@@ -118,7 +118,7 @@ starting a session and closing it in a third party service your library works wi
 Things to have in count:
 * The letter `A` is used to refers the previously created resources and the fact they are named the same.
 * Test #3 and #4 have both the same prefix `stage00_` which means that it doesn't matter the order between those 2 
-functions, they are in the same stage and can even work in parallel (although JUnit wont do so).
+functions, they are in the same stage and can even work in parallel (although JUnit4 wont do so).
 * Test #5 will be executed at last for having `stage001_` as prefix, which is ordered after the tests which 
 have prefixed with `stage00_`; so if one of the previous tests fails it fails as well.
 
@@ -192,6 +192,7 @@ whole key of the code is to do IO operations and mocking that code will give you
 cases use this ordered test strategy and you can be sure your library or project will work as intended. If your code is 
 used as a dependency in another project, that project will be able to mock all the functionality you created because 
 you already took care of it.
+Bear in mind that in JUnit5 there are out-of-the-box much better ways to do this.
 
 ## See more
  * A [real unit test](https://github.com/EliuX/MEGAcmd4J/blob/master/src/test/java/com/github/eliux/mega/cmd/BasicActionsTest.java) 
